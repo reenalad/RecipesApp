@@ -1,0 +1,53 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.RecipesApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="colorPrimary">@color/teal</item>
+        <item name="colorPrimaryVariant">#005D79</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/purple_500</item>
+        <item name="colorSecondaryVariant">@color/purple_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    </style>
+
+
+    <style name="ShapeAppearanceOverlay.App.CornerSize" parent="">
+        <item name="cornerSize">10%</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <style name="RecipeTitle" parent="TextAppearance.AppCompat">
+        <item name="android:textAlignment">"center"</item>
+        <item name="android:textSize">"22sp"</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">"bold"</item>
+        <item name="fontFamily">@font/alata</item>
+    </style>
+
+    <style name="Headings" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">"20sp"</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textStyle">"bold"</item>
+        <item name="fontFamily">@font/alata</item>
+    </style>
+
+    <style name="RecipeDetails" parent="TextAppearance.AppCompat">
+        <item name="android:textSize">"18sp"</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:lineSpacingExtra">1.5dp</item>
+        <item name="fontFamily">@font/alata</item>
+    </style>
+
+    <style name="Theme.App.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenAnimatedIcon">@mipmap/recipe_logo_foreground</item>
+        <item name="windowSplashScreenBackground">@color/teal</item>
+        <item name="postSplashScreenTheme">@style/Theme.RecipesApp</item>
+    </style>
+
+</resources>

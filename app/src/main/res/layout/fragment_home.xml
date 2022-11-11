@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.HomeFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/randomButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:backgroundTint="@color/white"
+            android:text="Random"
+            android:textColor="@color/black"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toStartOf="@id/startersButton"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/startersButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Starters"
+            android:textColor="@color/black"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/randomButton"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mainsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginStart="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Mains"
+            android:textColor="@color/black"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toStartOf="@id/dessertsButton"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/randomButton"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dessertsButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:text="Desserts"
+            android:textColor="@color/black"
+            app:cornerRadius="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintStart_toEndOf="@id/mainsButton"
+            app:layout_constraintTop_toBottomOf="@id/startersButton"
+            app:strokeColor="@color/black"
+            app:strokeWidth="1dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttons" />
+
+    <ImageView
+        android:id="@+id/errorImage"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/errorText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/errorImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
